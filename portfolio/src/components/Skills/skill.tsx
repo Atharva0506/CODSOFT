@@ -3,7 +3,7 @@ import './skill.css';
 import { BsPatchCheckFill } from 'react-icons/bs';
 function skills() {
   return (
-    <section id='Skill'>
+    <section id='Skill' className="fade-in">
 
       <h5>What Skill I have</h5>
       <h2>My skills</h2>
@@ -15,35 +15,35 @@ function skills() {
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>HTML</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
             <article className="skills_details">
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>CSS</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
             <article className="skills_details">
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>JavaScript</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
             <article className="skills_details">
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>Bootstrap</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
             <article className="skills_details">
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>Tailwind css</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
           </div>
@@ -59,35 +59,35 @@ function skills() {
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>MySql</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
             <article className="skills_details">
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>DBMS/RDBMS</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
             <article className="skills_details">
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>C/C++</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
             <article className="skills_details">
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>Python</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
             <article className="skills_details">
               <BsPatchCheckFill className='icon' />
               <div>
                 <h4>NodeJS</h4>
-                <small className='text-light'>skillsd</small>
+                <small className='text-light'>skilled</small>
                 </div>
             </article>
 

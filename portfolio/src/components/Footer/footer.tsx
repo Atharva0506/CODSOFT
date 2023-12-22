@@ -5,7 +5,7 @@ import {FaGithub} from 'react-icons/fa';
 import {FaQuora} from 'react-icons/fa';
 function footer() {
   return (
-  <footer>
+  <footer className="fade-in">
     <a href="#" className='footer_logo'>ATHARVA NAIK</a>
     <ul className='permalinks'>
       <li><a href="#">Home</a></li>

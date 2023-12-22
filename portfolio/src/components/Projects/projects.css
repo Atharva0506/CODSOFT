@@ -17,9 +17,8 @@
     background: transparent;
 }
 
-.projects_img{
+.projects_img img{
     border-radius: 1.5rem;
-    overflow: hidden;
 }
 .projects_item > h3 {
     margin: 1.2rem 0 2rem;

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./nav.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
@@ -24,9 +24,11 @@ function Nav() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+
   return (
-    <div>
-    <nav>
+    <div >
+     <nav>
       <div className="logo">Logo</div>
       
       <div className={`links ${isMenuOpen ? "active" : ""}`}>

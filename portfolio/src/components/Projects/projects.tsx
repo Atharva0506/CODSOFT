@@ -27,7 +27,7 @@ const proje = [
 ];
 function Projects() {
   return (
-    <section id='Projects'>
+    <section id='Projects' className="fade-in">
       <h5>My recent Work</h5>
       <h2>Projects</h2>
       <div className="container projects_container">

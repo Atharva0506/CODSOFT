@@ -24,6 +24,9 @@
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
 }
+.about__content span{
+    color: #cd5ff8;
+}
 
 .about__content  a{
     margin: .5rem;

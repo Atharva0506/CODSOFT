@@ -49,21 +49,21 @@ function Hero() {
   }, [charIndex, isDeleting, textIndex,words]);
 
   return (
-    <section id="Home">
+    <section id="Home" className="fade-in">
       <div className="container hero__container">
         <div className="hero_info">
           <h2>
             Hi There! <span className="wave">👋🏻</span>
           </h2>
           <h1>
-            <span>I'M</span> AHARVA NAIK
+            <span>I{"'"}M</span> AHARVA NAIK
           </h1>
           <h1 className="hybrid">
             <span>{words[textIndex].substring(0, charIndex)}</span>
           </h1>
         </div>
         <div className="hero__me">
-          <Image src={img} alt="Home Image" />
+          <Image src={img} className="img"  alt="Home Image" />
         </div>
       </div>
     </section>

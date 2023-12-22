@@ -8,7 +8,7 @@ function Contact() {
   
  
   return (
-    <section id='Contact'>
+    <section id='Contact' className="fade-in">
       <h5>Get In touch</h5>
       <h2>Contact me</h2>
 
