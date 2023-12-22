@@ -1,48 +1,35 @@
-import React from 'react'
-import './about.css';
-import Image from 'next/image';
-import img  from '../../../public/images/me-about.jpg';
-import {FaAward} from 'react-icons/fa';
-import {FiUsers} from 'react-icons/fi';
-import {VscFolderLibrary} from 'react-icons/vsc';
+import React from "react";
+import "./about.css";
+import Image from "next/image";
+import img from "../../../public/images/me.png";
 
 const about = () => {
   return (
-    <section id='about'>
+    <section id="About">
       <h5>Get to know</h5>
       <h2>About Me</h2>
 
       <div className="container about__container">
         <div className="about__me">
-          <img src={img} alt="about me" />
+          <Image src={img} alt="about me" />
         </div>
         <div className="about__content">
-          <div className="about__cards">
-          <article className='about__card'>
-            <FaAward className='about__icon' />
-            <h5>experiance</h5>
-            <small>1+ year</small>
-          </article>
-          <article className='about__card'>
-            <FiUsers className='about__icon' />
-            <h5>Clients</h5>
-            <small>1+ year</small>
-          </article>
-          <article className='about__card'>
-            <VscFolderLibrary className='about__icon' />
-            <h5>experiance</h5>
-            <small>1+ year</small>
-          </article>
-
-          </div>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non odit tempora harum, eveniet ut aliquid ab ipsum autem nisi repudiandae libero officia vitae pariatur dolore? Quas obcaecati iusto sunt officiis?
+            As a fresh software developer, I'm passionate about web development,
+            machine learning, and data science. I love working with teams that
+            encourage learning and growth. My goal is to create user-friendly
+            experiences and use data to make a meaningful impact. I enjoy taking on challenges, paying attention to details, and always pushing to
+            learn new technology. <br />
+    
           </p>
-          <a href="#contact" className='btn btn-primary'>Lets Talk</a>
+          <a href="#contact" className="btn btn-primary">
+            Lets Talk
+          </a>
+          <a href={""} download className='btn' >Download CV</a>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default about
+export default about;

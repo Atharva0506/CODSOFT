@@ -7,11 +7,12 @@ import { BiBook } from "react-icons/bi";
 import { SiGmail } from "react-icons/si";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+import { GoProject } from "react-icons/go";
 const navItems = [
   { id: "Home", icon: <AiOutlineHome /> },
   { id: "About", icon: <AiOutlineUser /> },
   { id: "Skill", icon: <BiBook /> },
+  { id: "Projects", icon: <GoProject /> },
   { id: "Contact", icon: <BiMessageSquareDetail /> },
 ];
 
@@ -46,24 +47,24 @@ function Nav() {
       </div>
       
       <div className={`social ${isMenuOpen ? "active" : ""}`}>
-        <a href="http://">
+        <a href="https://github.com/Atharva0506">
           <FaGithub />
         </a>
-        <a href="http://">
+        <a href="https://www.linkedin.com/in/atharva-naik-527b74255/">
           <FaLinkedin />
         </a>
-        <a href="http://">
+        <a href="mailto:atharvan.coder@gmail.com">
           <SiGmail />
         </a>
       
       </div>
       
-    </nav>
     <button className="hamburger" onClick={toggleMenu}>
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
       </button>
+    </nav>
     </div>
   );
 }
