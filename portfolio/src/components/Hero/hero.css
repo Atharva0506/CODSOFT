@@ -1,4 +1,5 @@
 .hero__container {
+    height: 80vh;
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
@@ -10,7 +11,19 @@
     justify-content: center;
     width: 100%;
     text-align: left;
+    animation: slideInFromLeft 1s ease-out;
   }
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
   
   .hero_info h2 span{
     font-size: 2rem;
@@ -27,12 +40,20 @@
   .hero__me {
     width: 100%;
     display: grid;
-    place-items: center;
-  }
-
-  .hero__me  {
-    width: 100%;
     height: 100%;
+    place-items: center;
+    animation: slideInFromRight 1s ease-in;
+    
+  }
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 
 

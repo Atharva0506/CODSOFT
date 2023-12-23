@@ -49,7 +49,7 @@ function Hero() {
   }, [charIndex, isDeleting, textIndex,words]);
 
   return (
-    <section id="Home" className="fade-in">
+    <section id="Home" >
       <div className="container hero__container">
         <div className="hero_info">
           <h2>

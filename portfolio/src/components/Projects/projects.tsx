@@ -1,28 +1,30 @@
 import React from 'react'
 import './projects.css';
-import img from '../../../public/images/portfolio4.jpg';
+import Summarizer from '../../../public/images/Summarizer.png';
+import kanban from '../../../public/images/Kanban.jpg';
+import quiz from '../../../public/images/quiz.jpg';
 import Image from 'next/image';
 const proje = [
   {
     id: 1,
-    img: img,
-    title: 'Project 1',
-    github: 'https://github.com',
-    livedemo: 'xy',
+    img: kanban,
+    title: 'Kanban Board Task Management 1',
+    github: 'https://github.com/Atharva0506/Kanban-Board-Task-Management',
+    livedemo: 'https://kanban-board-task-management-beta.vercel.app/',
   },
   {
     id: 2,
-    img: img,
-    title: 'Project 1',
-    github: 'https://github.com',
-    livedemo: 'xy',
+    img: quiz,
+    title: 'AutoQuiz- AI based Quiz Generator 1',
+    github: 'https://github.com/Atharva0506/AutoQuiz',
+    livedemo: 'https://github.com/Atharva0506/AutoQuiz',
   },
   {
     id: 3,
-    img: img,
-    title: 'Project 1',
-    github: 'https://github.com',
-    livedemo: 'xy',
+    img: Summarizer,
+    title: 'Summarizer',
+    github: 'https://github.com/Atharva0506/Summarizer',
+    livedemo: 'https://colab.research.google.com/github/Atharva0506/Summarizer/blob/main/books_sum.ipynb',
   },
 ];
 function Projects() {
