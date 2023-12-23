@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import img from "../../../public/images/home-main.svg";
+import img from "../../../../public/images/home-main.svg";
 import "./hero.css";
 
 function Hero() {

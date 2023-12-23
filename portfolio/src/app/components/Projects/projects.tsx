@@ -1,8 +1,8 @@
 import React from 'react'
 import './projects.css';
-import Summarizer from '../../../public/images/Summarizer.png';
-import kanban from '../../../public/images/Kanban.jpg';
-import quiz from '../../../public/images/quiz.jpg';
+import Summarizer from '../../../../public/images/Summarizer.png';
+import kanban from '../../../../public/images/Kanban.jpg';
+import quiz from '../../../../public/images/quiz.jpg';
 import Image from 'next/image';
 const proje = [
   {
