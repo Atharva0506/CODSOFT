@@ -1,5 +1,5 @@
 "use client";
-import {  useState } from "react";
+import { useState } from "react";
 import { Menu } from "@headlessui/react";
 import {
   MagnifyingGlassIcon,
@@ -13,11 +13,10 @@ function Navbar() {
     state.searchString,
     state.setSearchString,
   ]);
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header>
-      <div className="flex flex-col md:flex-row items-center p-5 bg-gray-500/5 rounded-b-2xl">
+      <div className="flex flex-col md:flex-row items-center p-5 bg-gray-500/5 rounded-b-2xl ">
         <div
           className="
       absolute
@@ -68,31 +67,26 @@ function Navbar() {
                   <UserCircleIcon />
                 </Menu.Button>
               </div>
-              <Menu.Items
-                className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none "
-              >
+              <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none ">
                 <div className="py-1">
-
-                <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          href="#profile"
-                          className={`${
-                            active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
-                          } block px-4 py-2 text-base`}
-                        >
-                         GitHub
-                        </a>
-                      )}
-                    </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="#profile"
+                        className={`${
+                          active ? "bg-gray-100 text-gray-900" : "text-gray-700"
+                        } block px-4 py-2 text-base`}
+                      >
+                        GitHub
+                      </a>
+                    )}
+                  </Menu.Item>
                 </div>
               </Menu.Items>
             </Menu>
           </div>
         </div>
       </div>
-           
-
     </header>
   );
 }

@@ -10,7 +10,7 @@ function Board() {
   state.updateTodoInDb
 
   ]);
-  console.log("Board",board);
+  
   useEffect(() => {
     // Get Board
     getBoard();
