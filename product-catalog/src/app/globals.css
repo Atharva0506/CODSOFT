@@ -19,9 +19,110 @@ html {
   --color-primary: #86B6F6;
   --color-primary-variant:#176B87;
   --color-black: #000000;
+  --container-width-1g: 75%;
+  --container-width-md: 86%;
+  --container-width-ms: 90%;
 }
 
 body{
   background-color: var(--color-bg);
   color: var(--color-black);
 }
+
+
+.container {
+  width: var(--container-width-1g);
+  margin: 0 auto;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+
+
+
+.text-light{
+  color: var(--color-light);
+}
+
+a{
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+a:hover{
+  color: var(--color-black);
+}
+
+.btn{
+  width: max-content;
+  display: inline;
+  columns: var(--color-black);
+  padding: 0.75rem 1.3rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border-color: var(--color-primary);
+  transition: var(--transition);
+}
+.btn:hover{
+  background: var(--color-black);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+.btn-primary{
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+.fade-in{
+  scale: 0.8;
+  opacity: 0;
+  animation: fadeIn linear forwards;
+  animation-timeline: view();
+ animation-range: entry 100px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+/* ============== media tabets ================= */
+
+@media only screen and (max-width: 1024px) {
+.container{
+  width: var(--container-width-md);
+}
+section{
+  margin-top: 6rem;
+}
+}
+
+/* ================== media phone Small Devacie ================= */
+
+@media only screen and (max-width: 600px) {
+.container{
+  width: var(--container-width-ms);
+}
+section > h2{
+  margin-bottom: 2rem;
+}
+}
+

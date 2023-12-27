@@ -2,7 +2,10 @@ import React from 'react'
 
 function ProductCatalog() {
   return (
-    <div>product_catalog</div>
+    <div>
+      
+
+    </div>
   )
 }
 
