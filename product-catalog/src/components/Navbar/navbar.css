@@ -36,7 +36,17 @@
     font-size: 1.3rem;
     margin: 1rem;
     justify-content: space-evenly;
+    align-items: center;
   }
+  .cart{
+    display: flex;
+    gap: 1;
+    align-items: center;
+  }
+  .cart span{
+    font-size: 0.8rem;
+  }
+
   .util p:hover{
     color: var(--color-primary);
   }

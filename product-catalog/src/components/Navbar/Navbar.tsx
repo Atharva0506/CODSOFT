@@ -13,8 +13,11 @@ function Navar() {
         <p>
           <IoMdSearch />
         </p>
-        <p>
+        <p className="cart">
           <IoCart />
+          &nbsp;
+          {"₹"+12}
+          <span>(0)</span>
         </p>
       </div>
     </nav>
