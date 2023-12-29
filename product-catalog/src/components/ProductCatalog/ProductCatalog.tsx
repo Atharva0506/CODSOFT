@@ -1,82 +1,98 @@
 "use client"
-import React, { useState } from 'react';
+// ProductCatalog.tsx
+
+import React, { useEffect, useState } from 'react';
 import products from '@/product.json';
-import Image from 'next/image';
-import "./ProductCatalog.css"
+import './ProductCatalog.css';
+import { IoCart } from 'react-icons/io5';
 
-export interface ProductCatalog{
-    id: number,
-    name: string,
-    price: number,
-    image: string,
-    category: string  
+export interface ProductCatalog {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  category: string;
 }
+
 function ProductCatalog() {
-  const [productData,setProductData] = useState<ProductCatalog[]>(products);
-  const [categoryData,setCategoryData]= useState<any>([]);
+  const [categoryData, setCategoryData] = useState<string[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<ProductCatalog[]>(products);
 
-   const filterData = (data: ProductCatalog[], field: string) => {
+  const filterData = (data: ProductCatalog[], field: string) => {
     let filteredData = data.map((currentElem: any) => {
-      return currentElem[field]; 
+      return currentElem[field];
     });
-  return (filteredData=[...new Set(filteredData)]) 
-  }
-  
-  const categoryType = filterData(products, "category"); 
-  const rangeType = filterData(products, "range")
-  const handleCategoryCheck = (event:any)=>{
-  const category = event.target.value;
-    if(event.target.checked){
-      setCategoryData([...categoryData,category])
-      console.log(categoryData);
-    }else{
-      setCategoryData(categoryData.filter((catg:any)=>{catg!==category}))
-    }
-  }
-console.log(categoryData)
-  return (
-      <section id='Products'>
-      <h2>Products</h2>
-      <div className="catalog_nav">
-        <ul>
-       {categoryType.map((item,index)=>(
-        <li key={index}>
-            <div>
-              <input type="checkbox" 
-              value={item}
-              checked={categoryData.includes(item)}
-              onChange={()=>{handleCategoryCheck}}
-              />
-            </div>
-            <div style={{color : 'white'}}>{item}</div>
-        </li>
-       ))}
-      </ul>
-      </div>
-      <div className="container products_container">
-      {
-        // products.map((product)=>{
-        //   return (
-        //     <article key={product.id}>
-        //     <div className='products_img'>
-        //       <img src={product.image} alt="products_img" />
-        //     </div>
+    return [...new Set(filteredData)];
+  };
 
-        //     <h3>{product.name}&nbsp; {product.price}</h3>
-            
-        //     <div className='products_item-cta'>
-        //       <button  >Add to Cart</button>
-        //       <button  >Vist</button>
-        //     </div>
-        //   </article>
-        //   )
-        // })
+  const categoryType = filterData(products, 'category');
+
+  const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedCategory = event.target.value;
+    setCategoryData(selectedCategory !== 'all' ? [selectedCategory] : []);
+  };
+
+  useEffect(() => {
+    const groupedData = products.reduce((acc: any, item: any) => {
+      const category = item.category;
+      if (!acc[category]) {
+        acc[category] = [];
       }
+      acc[category].push(item);
+      return acc;
+    }, {});
 
+    if (categoryData.length === 0) {
+      setFilteredProducts(products);
+    } else {
+      const filteredData = categoryData.flatMap((category: any) => {
+        return groupedData[category] || [];
+      });
+      setFilteredProducts(filteredData);
+    }
+  }, [categoryData]);
+
+  return (
+    <section id='Products'>
+      <h2>Products</h2>
+      <div className='category-select'>
+        <select id='categorySelect' onChange={handleCategoryChange}>
+          <option value='all'>Sort by Category</option>
+          {categoryType.map((item, index) => (
+            <option key={index} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className='container products_container'>
+        {filteredProducts.map((product) => (
+          <div className='product-card' key={product.id}>
+            <div className='product-tumb'>
+              <img src={product.image} alt='' />
+            </div>
+            <div className='product-details'>
+              <span className='product-catagory'>{product.category}</span>
+              <h4>
+                <a href=''>{product.name}</a>
+              </h4>
+              
+              <div className='product-bottom-details'>
+                <div className='product-price'>₹{product.price}</div>
+                <div className='product-links'>
+                <a href='#' >
+                <IoCart />
+              </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
-    
   );
 }
 
 export default ProductCatalog;
+
+

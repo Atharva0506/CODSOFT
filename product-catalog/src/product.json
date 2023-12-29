@@ -1,31 +1,31 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "braided-leather-belt-1",
     "price": 19.99,
     "image": "/images/products/braided-leather-belt-1.jpg",
-    "category": "normal"
+    "category": "belt"
   },
   {
     "id": 2,
-    "name": "Product 2",
+    "name": "brooks-sunglasses-1",
     "price": 29.99,
     "image": "/images/products/brooks-sunglasses-1.jpg",
-    "category": "High"
+    "category": "sunglasses"
   },
   {
     "id": 3,
-    "name": "Product 3",
+    "name": "wool-scarf-2",
     "price": 39.99,
     "image": "/images/products/wool-scarf-2.jpg",
-    "category": "Low"
+    "category": "scarf"
   },
   {
     "id": 4,
     "name": "Product 4",
     "price": 39.99,
-    "image": "/images/products/wool-scarf-2.jpg",
-    "category": "Low"
+    "image": "/images/products/wool-scarf-1.jpg",
+    "category": "scarf"
   }
  
 ]
